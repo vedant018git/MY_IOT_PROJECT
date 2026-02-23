@@ -1,0 +1,19 @@
+commands for github
+1)pwd:- print working directory (this command will gives working directory)
+2)touch:- It will create a file in that folder
+3)mkdir:- it will create a directory (make directory)
+4)ls:- used to listout the folder
+5)cd:- used to change directory(folder)
+6)rm and rmdir:- used to remove files and directory respectively
+7)git init:-initialization in folder
+8)git status:-to track files
+9)git add . :-to add files or to get the file status clear
+10)git commit -m "feature 1_commit"
+11)git config --global --list :- to know about usernames or email
+   -git config --global user.name "_" :- To change the username
+   -git config --global user.email "_" :- To change email
+12)git remote add origin (here paste that reposatory link)
+13)git push origin "main"
+14)git checkout -b "feature 1" :- to create a new branch
+15)git checkout -d :- to delete branch
+16)git clone :- to create a clone

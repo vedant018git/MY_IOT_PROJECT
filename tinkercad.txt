@@ -1,0 +1,37 @@
+/This is my forsy arduino program.
+//Global declaration
+#define led1 4
+#define led2 7
+#define led3 2
+
+void setup() {
+pinMode(led1,OUTPUT);
+Serial.begin (9600);
+ pinMode(led2,OUTPUT);
+Serial.begin (9600); 
+  pinMode(led3,OUTPUT);
+Serial.begin (9600);
+}
+
+void loop() {
+  digitalWrite(led1,HIGH);
+  Serial.println("Led1 Turns ON");
+  delay(1000); 
+  digitalWrite(led1,LOW);
+  Serial.println("Led1 Turns OFF");
+  delay(1000);
+  
+  digitalWrite(led2,HIGH);
+  Serial.println("Led2 Turns ON");
+  delay(1000);
+  digitalWrite(led2,LOW);
+  Serial.println("Led2 Turns OFF");
+  delay(1000);
+  
+  digitalWrite(led3,HIGH);
+  Serial.println("Led3 Turns ON");
+  delay(1000);
+  digitalWrite(led3,LOW);
+  Serial.println("Led3 Turns OFF");
+  delay(1000);
+}

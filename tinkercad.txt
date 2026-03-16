@@ -1,4 +1,4 @@
-/This is my forsy arduino program.
+/This is my first arduino program.
 //Global declaration
 #define led1 4
 #define led2 7

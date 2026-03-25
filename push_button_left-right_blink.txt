@@ -1,0 +1,77 @@
+//global declaration 
+#define Led1 2
+#define Led2 3
+#define Led3 4
+#define right_btn 9
+#define left_btn 8
+
+void setup (){
+  Serial.begin (9600);
+ pinMode (Led1, OUTPUT);
+pinMode (Led2, OUTPUT);
+pinMode (Led3, OUTPUT);
+  
+  pinMode (right_btn, INPUT);
+  pinMode (left_btn, INPUT);
+  
+}
+
+
+void loop()   {
+   
+ 
+int left = digitalRead(left_btn);
+  int right = digitalRead(right_btn);
+  
+  
+  if (left == HIGH)   {
+   Serial.println ("LEFT BUTTON PRESSED");
+    
+    digitalWrite(Led1, HIGH);
+    delay(100);
+    
+    digitalWrite(Led1, LOW);
+    delay(100);
+    
+    digitalWrite(Led2, HIGH);
+    delay(100);
+    
+    digitalWrite(Led2, LOW);
+    delay(100);
+    
+    digitalWrite(Led3, HIGH);
+    delay(100);
+
+    digitalWrite(Led3, LOW);
+    delay(100);
+  }
+  
+  else if (right == HIGH)   {
+     Serial.println ("RIGHT BUTTON PRESSED");
+    
+    digitalWrite(Led3, HIGH);
+    delay(100);
+    
+    digitalWrite(Led3, LOW);
+    delay(100);
+    
+    digitalWrite(Led2,HIGH);
+    delay(100);
+    
+    digitalWrite(Led2, LOW);
+    delay(100);
+    
+    digitalWrite(Led1, HIGH);
+    delay(100);
+    
+    digitalWrite(Led1, LOW);
+    delay(100);
+  
+  }
+  
+  else {
+  digitalWrite(Led1, LOW);
+    digitalWrite(Led2, LOW);
+    digitalWrite(Led3, LOW);
+  }
+}

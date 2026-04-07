@@ -1,31 +1,91 @@
-//global declaration
+//This is my forsy arduino program.
+//Global declaration
+#define led1 1
+#define led2 2
+#define led3 3
+#define led4 4
+#define led5 5
+#define led6 6
+#define led7 7
+#define led8 8
+#define button 9
 
-#define LED_1 2
-#define button 8
 
 void setup() {
- Serial.begin(9600);   //to begin data comm. 
- pinMode(LED_1, OUTPUT);  //LED
- pinMode(button, INPUT);
+pinMode(led1,OUTPUT);
+Serial.begin (9600);
+ pinMode(led2,OUTPUT);
+Serial.begin (9600); 
+  pinMode(led3,OUTPUT);
+Serial.begin (9600);
+   pinMode(led4,OUTPUT);
+Serial.begin (9600);
+   pinMode(led5,OUTPUT);
+Serial.begin (9600);
+   pinMode(led6,OUTPUT);
+Serial.begin (9600);
+   pinMode(led7,OUTPUT);
+Serial.begin (9600);
+   pinMode(led8,OUTPUT);
+Serial.begin (9600);
+  
 }
 
 void loop() {
-  bool x = digitalRead(button);
-  Serial.print("button status = ");
-  Serial.println (x);
+  digitalWrite(led1,HIGH);
+  Serial.println("Led1 Turns ON");
+  delay(100); 
+  digitalWrite(led1,LOW);
+  Serial.println("Led1 Turns OFF");
+  delay(100);
   
+  digitalWrite(led2,HIGH);
+  Serial.println("Led2 Turns ON");
+  delay(100);
+  digitalWrite(led2,LOW);
+  Serial.println("Led2 Turns OFF");
+  delay(100);
   
-  if( x == 1) {
-    digitalWrite(LED_1, HIGH);
-    Serial.println("LED TURNS ON");
-  }
-else {
-digitalWrite(LED_1, LOW);
-Serial.println("LED TURNS OFF");
-}
-
-
-
-
-
+  digitalWrite(led3,HIGH);
+  Serial.println("Led3 Turns ON");
+  delay(100);
+  digitalWrite(led3,LOW);
+  Serial.println("Led3 Turns OFF");
+  delay(100);
+  
+  digitalWrite(led4,HIGH);
+  Serial.println("Led4 Turns ON");
+  delay(100); 
+  digitalWrite(led4,LOW);
+  Serial.println("Led4 Turns OFF");
+  delay(100);
+  
+  digitalWrite(led5,HIGH);
+  Serial.println("Led5 Turns ON");
+  delay(100); 
+  digitalWrite(led5,LOW);
+  Serial.println("Led5 Turns OFF");
+  delay(100);
+  
+  digitalWrite(led6,HIGH);
+  Serial.println("Led6 Turns ON");
+  delay(100); 
+  digitalWrite(led6,LOW);
+  Serial.println("Led6 Turns OFF");
+  delay(100);
+  
+  digitalWrite(led7,HIGH);
+  Serial.println("Led7 Turns ON");
+  delay(100); 
+  digitalWrite(led7,LOW);
+  Serial.println("Led7 Turns OFF");
+  delay(100);
+  
+  digitalWrite(led8,HIGH);
+  Serial.println("Led8 Turns ON");
+  delay(100); 
+  digitalWrite(led8,LOW);
+  Serial.println("Led8 Turns OFF");
+  delay(100);
+  
 }

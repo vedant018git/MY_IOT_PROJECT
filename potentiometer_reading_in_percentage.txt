@@ -1,0 +1,41 @@
+//Global declartion
+#define pot A0
+#define Led1 1
+#define Led2 2
+
+
+void setup() {
+  pinMode(Led1, OUTPUT);
+  pinMode(Led2, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+    
+   int x = analogRead(pot);
+//convert to percentage
+   int percent = (x/1023.0)*100;
+
+Serial.print("Pot Reading =");
+Serial.println(x);  
+
+ Serial.print("percentage =");
+  Serial.print(percent);
+Serial.println("%");  
+ 
+  //Led condition
+ if (x>0 && x,100)  {
+  digitalWrite(Led1, HIGH);
+  Serial.println("LED1 TURNS ON");
+  digitalWrite(Led2, LOW);
+  Serial.println("LED2 TURNS OFF");
+ }
+   else if (x>101 && x<200)  {
+digitalWrite(Led1, LOW);
+Serial.println("LED1 OFF");
+digitalWrite(Led2, HIGH);
+Serial.println("LED2 ON");
+     
+ }
+delay (1000);
+}

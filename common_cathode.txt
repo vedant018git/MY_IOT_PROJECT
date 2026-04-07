@@ -1,0 +1,49 @@
+// Global declaration
+//RGB led
+#define RED 9
+#define GREEN 10
+#define BLUE 11
+
+
+void setup()
+{
+  
+  pinMode(RED, OUTPUT);
+  pinMode(GREEN, OUTPUT);
+  pinMode(BLUE, OUTPUT);
+
+}
+
+void loop()
+{
+  
+  digitalWrite(RED, HIGH);
+  digitalWrite(GREEN, LOW);
+  digitalWrite(BLUE, LOW);
+  Serial.println("RED LED GLOW");
+  delay(500);
+  
+  digitalWrite(RED, LOW);
+  digitalWrite(GREEN, HIGH);
+  digitalWrite(BLUE, LOW);
+  Serial.println("GREEN LED GLOW");
+  delay(500);
+  
+  digitalWrite(RED, LOW);
+  digitalWrite(GREEN, LOW);
+  digitalWrite(BLUE, HIGH);
+  Serial.println("BLUE LED GLOW");
+  delay(500);
+  
+  digitalWrite(RED, HIGH);
+  digitalWrite(GREEN, LOW);
+  digitalWrite(BLUE, HIGH);
+  Serial.println("pink LED GLOW");
+  delay(500);
+  
+  digitalWrite(RED, LOW);
+  digitalWrite(GREEN, HIGH);
+  digitalWrite(BLUE, HIGH);
+  Serial.println("BLUE LED GLOW");
+  delay(500);
+}

@@ -1,0 +1,39 @@
+#define led1 3
+#define led2 5
+#define btn_1 10
+#define btn_2 11
+
+  byte myarray[] = { 10, 24, 48, 115, 127, 144, 166, 199, 225, 255  };     // 1D array
+ 
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  
+  pinMode(btn_1, INPUT);
+   pinMode(btn_2, INPUT);
+}
+void loop() {
+    if (digitalRead(btn_1) == HIGH )  
+    {
+   for (int pos=0; pos<10; pos++) {
+   analogWrite(led1, myarray[pos]);
+   delay(1000);
+   }
+    }
+ else if (digitalRead(btn_2) == HIGH )   
+    {
+   for (int pos=0; pos<10; pos++) {
+   analogWrite(led2, myarray[pos]);
+   delay(1000);
+   }
+    }
+    else {  
+analogWrite(led1, LOW);
+analogWrite(led2, LOW);
+      
+      delay(1000);
+    }
+}
+   

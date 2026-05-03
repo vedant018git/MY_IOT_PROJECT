@@ -1,0 +1,48 @@
+// DC MOTOR WITH POTENTIOMETER
+#define pot A0
+#define motorpin 9
+#define led1 3
+#define btn_pin 2
+#define led2 4 
+ 
+int speeds[] = {0, 80, 160, 255};
+
+void setup()
+{
+  pinMode(led1 , OUTPUT);
+  pinMode(led2 , OUTPUT);
+  pinMode(motorpin , OUTPUT);
+ 
+  pinMode(btn_pin, INPUT);
+  pinMode(pot, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+ int buttonState = digitalRead(btn_pin);    //to read button state
+  
+  int potValue = analogRead(pot);   //to read pot value
+  
+  int motorSpeed = map(potValue,0,1023,0,255);
+  analogWrite(motorpin, motorSpeed);
+  
+  Serial.print("POT VALUE = ");
+   Serial.println(potValue);
+  
+  Serial.print("MOTOR SPEED = ");
+   Serial.println(motorSpeed);
+  
+  
+  if (buttonState == LOW)   {
+  Serial.println("ALERT!!!");
+    digitalWrite(led1,HIGH);     //red led on
+     digitalWrite(led2,LOW);   //green led off
+  }  
+  else {
+ digitalWrite(led1,LOW);     //red led off
+     digitalWrite(led2,HIGH);   //green led onn
+  }
+
+delay(1000);
+}

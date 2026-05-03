@@ -1,4 +1,5 @@
-commands for github
+commands for gitbash
+
 1)pwd:- print working directory (this command will gives working directory)
 2)touch:- It will create a file in that folder
 3)mkdir:- it will create a directory (make directory)

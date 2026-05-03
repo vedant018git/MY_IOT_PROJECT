@@ -1,0 +1,30 @@
+//PIR SENSOR
+#define pir 2
+#define led 4
+
+void setup() {
+  Serial.begin(9600);
+pinMode(pir, INPUT);
+pinMode(led, OUTPUT);
+  
+}
+
+void loop() {
+   bool x = digitalRead(pir);
+  
+  Serial.print("MOTION STATUS = ");
+  Serial.println (x); 
+  
+  if(x==HIGH)
+  {
+  digitalWrite(led, HIGH);
+  Serial.println("MOTION DETECTED! ");
+  }
+  else{
+  digitalWrite(led, LOW);
+  Serial.println("NO MOTION! ");
+  }
+ delay (100);
+}
+
+
